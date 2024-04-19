@@ -27,7 +27,7 @@ export default function Page({params}: { params: { id: string } }) {
         }
     }, [params.id]);
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setLoading(true);
         const formData = new FormData(event.currentTarget);
